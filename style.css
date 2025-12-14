@@ -37,15 +37,16 @@ h2, h3 {
 }
 
 /* ====================================
-   Law 選択画面のスタイル
+   Law 選択画面のスタイル ★★★ 修正箇所 ★★★
 ==================================== */
 
 .law-selector-grid {
-    display: grid;
-    /* 画面幅に応じて、ボタンが2列になるように調整 */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    display: flex; /* Flexboxに変更 */
+    flex-direction: column; /* 縦一列に並べる */
+    align-items: center; /* 中央寄せ */
     gap: 15px;
     margin-top: 20px;
+    width: 100%; /* コンテナいっぱいに広げる */
 }
 
 .law-btn {
@@ -59,6 +60,10 @@ h2, h3 {
     font-size: 1.1em;
     cursor: pointer;
     transition: background-color 0.2s;
+    
+    /* 縦一列表示のための幅調整 */
+    width: 90%; 
+    max-width: 400px; /* ボタンの最大幅を制限 */
 }
 
 .law-btn:hover {
