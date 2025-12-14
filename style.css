@@ -1,0 +1,100 @@
+/* アプリ全体のレイアウト調整 */
+body {
+    background-color: #f0f0f0; /* 背景色 */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#quiz-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #003366; /* ラグビーによくある濃い青色 */
+    border-bottom: 2px solid #ffcc00; /* 金色の下線 */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#question-text {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* 選択肢ボタンの共通スタイル */
+.btn-grid {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: #d0d0d0;
+}
+
+/* 正解・不正解のスタイル */
+.btn.correct {
+    background-color: #a8e6a8; /* 緑色 */
+    border-color: #4CAF50;
+    color: #333;
+    font-weight: bold;
+}
+
+.btn.wrong {
+    background-color: #ff9999; /* 赤色 */
+    border-color: #f44336;
+    color: #333;
+}
+
+/* 判定フィードバックテキスト */
+#feedback-text {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* 次のボタン */
+#next-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#next-button:hover {
+    background-color: #003366;
+}
+
+/* hideクラスがついていたら非表示 */
+.hide {
+    display: none;
+}
